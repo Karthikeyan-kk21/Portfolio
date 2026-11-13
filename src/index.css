@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #0B1011;
+  --surface: #141C1D;
+  --surface-elevated: #192324;
+  --border: #263536;
+  --text-primary: #F1F4F2;
+  --text-secondary: #A5B2AE;
+  --text-muted: #71817D;
+  --accent: #669B96;
+  --accent-highlight: #A4C5C0;
+  --accent-hover: #7AAEA9;
+  --accent-subtle: rgba(102, 155, 150, 0.12);
+  --accent-border: rgba(102, 155, 150, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0B1011;
+  color: #F1F4F2;
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1011;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #263536;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #669B96;
+}
+
+/* Hairline rule utility */
+.hairline {
+  height: 1px;
+  background-color: #263536;
+  border: none;
+}
+
+/* Technical grid background overlay for subtle texture */
+.grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(38, 53, 54, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 53, 54, 0.3) 1px, transparent 1px);
+}
