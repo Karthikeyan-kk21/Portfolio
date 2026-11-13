@@ -25,3 +25,8 @@ dist-ssr
 
 # Temporary / OS
 Thumbs.db
+
+# Documentation / Notes
+DESIGN.md
+design.md
+
